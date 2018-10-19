@@ -11,18 +11,11 @@ jobs:
           SBT_OPTS: -Xms512M -Xmx3G -Xss1G -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=376M
           APP_HOST: https://app.imperative.com
           SLEEP_MILLIS: 86400000
-          MAILER_FROM: $IM_EMAIL
           MAILER_FROM_NAME: Imperative Stress Tests
-          MAILER_TO: imperative.stress.tests@gmail.com
           MAILER_HOST: smtp.gmail.com
           MAILER_PORT: 587
-          MAILER_USER: $IM_LOGIN
-          MAILER_PASSWORD: $IM_PASSWORD
           MAILER_START_TTLS: "true"
           GSERVICE_ACCOUNT_EMAIL: imperative@imperative-219010.iam.gserviceaccount.com
           GSERVICE_ACCOUNT_PKCS12_FILE_PATH: /opt/docker/key.p12
-          IMPERATIVE_LOGIN: $IM_EMAIL
-          IMPERATIVE_PASSWORD: $IM_PASSWORD
     steps:
-      - run: env
       - run: /opt/docker/bin/ui-test
