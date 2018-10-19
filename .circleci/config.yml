@@ -20,7 +20,7 @@ jobs:
           MAILER_PASSWORD: $IM_PASSWORD
           MAILER_START_TTLS: "true"
           GSERVICE_ACCOUNT_EMAIL: imperative@imperative-219010.iam.gserviceaccount.com
-          GSERVICE_ACCOUNT_PKCS12_FILE_PATH: key.p12
+          GSERVICE_ACCOUNT_PKCS12_FILE_PATH: /opt/docker/key.p12
           IMPERATIVE_LOGIN: $IM_EMAIL
           IMPERATIVE_PASSWORD: $IM_PASSWORD
     steps:
