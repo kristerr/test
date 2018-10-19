@@ -24,4 +24,5 @@ jobs:
           IMPERATIVE_LOGIN: $IM_EMAIL
           IMPERATIVE_PASSWORD: $IM_PASSWORD
     steps:
+      - run: env
       - run: /opt/docker/bin/ui-test
